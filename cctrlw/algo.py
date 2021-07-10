@@ -74,7 +74,9 @@ class dsu:
                     r.append(rep_byte(ss[i]))
                 else:
                     r.append(f"{rep_byte(ss[i])}:{rep_byte(ss[j - 1])}")
-            R.append(", ".join(r))
+            r = ", ".join(r)
+            r = f'{{{r}}}'
+            R.append(r)
             t_card += len(ss)
         singletons = len(U) - t_card
         if singletons:
