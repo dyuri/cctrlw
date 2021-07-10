@@ -13,7 +13,6 @@ from sys import argv, executable, stdin, stdout
 from . import CONFIG_DIR, MODES_JSON
 from .algo import dsu, get_streak, load_partitions
 
-
 class CustomFormatter(ArgumentDefaultsHelpFormatter):
     def _fill_text(self, text, width, indent):
         return "".join(indent + line for line in text.splitlines(keepends=True))
